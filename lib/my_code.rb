@@ -35,11 +35,19 @@ def map_to_square(source_array)
 end
 
 def reduce_to_total(source_array, starting_point)
-  new_array = []
-  i = starting_point
-  if source_array[starting_point]
-  while i < source_array.length do
-    new_array << source_array[i] +
+  sum = 0
+  if starting_point
+    i = starting_point
+  else
+    i = 0
+    while i < source_array.length do
+      sum += source_array[i]
+      i += 1
+    end
+  end
+  sum
+end 
+ 
   
   
 
